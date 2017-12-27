@@ -63,6 +63,10 @@ const stopGameWhenSnakeTouchBorder = function() {
   }
 }
 
+const reloadGame = function() {
+  window.location.reload();
+}
+
 const removeInterval = function() {
   clearInterval(animator);
   document.getElementById('grid').innerHTML = `game over`
@@ -76,7 +80,7 @@ const startGame=function() {
   createSnake();
   drawGrids(numberOfRows,numberOfCols);
   drawSnake(snake);
-  removeInterval(animator);
+  stopGame(animator);
   createFood(numberOfRows,numberOfCols);
   drawFood(food);
   addKeyListener();
