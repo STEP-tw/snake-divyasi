@@ -76,7 +76,7 @@ const startGame=function() {
   createSnake();
   drawGrids(numberOfRows,numberOfCols);
   drawSnake(snake);
-  removeInterval();
+  removeInterval(animator);
   createFood(numberOfRows,numberOfCols);
   drawFood(food);
   addKeyListener();
