@@ -54,10 +54,29 @@ const createFood=function(numberOfRows,numberOfCols) {
   food=generateRandomPosition(numberOfCols,numberOfRows);
 }
 
+const stopGameWhenSnakeTouchBorder = function() {
+  if(snake.head.x >= numberOfRows || snake.head.x < 0) {
+    return removeInterval();
+  }
+  if (snake.head.y >= numberOfCols || snake.head.y < 0) {
+    return removeInterval();
+  }
+}
+
+const removeInterval = function() {
+  clearInterval(animator);
+  document.getElementById('grid').innerHTML = `game over`
+}
+
+const stopGame = function() {
+  stopGameWhenSnakeTouchBorder();
+}
+
 const startGame=function() {
   createSnake();
   drawGrids(numberOfRows,numberOfCols);
   drawSnake(snake);
+  removeInterval();
   createFood(numberOfRows,numberOfCols);
   drawFood(food);
   addKeyListener();
