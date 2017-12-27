@@ -56,15 +56,15 @@ const createFood=function(numberOfRows,numberOfCols) {
   food=generateRandomPosition(numberOfCols,numberOfRows);
 }
 
-const stopGameWhenSnakeTouchBorder = function(snake) {
-  let head = snake.getHead();
-  if(snake.head.x >= numberOfRows || snake.head.x < 0) {
-    return removeInterval();
-  }
-  if (snake.head.y >= numberOfCols || snake.head.y < 0) {
-    return removeInterval();
-  }
-}
+ const stopGameWhenSnakeTouchBorder = function(snake) {
+//   let head = snake.getHead();
+//   if(snake.head.x >= numberOfRows || snake.head.x < 0) {
+//     return removeInterval();
+//   }
+//   if (snake.head.y >= numberOfCols || snake.head.y < 0) {
+//     return removeInterval();
+//   }
+// }
 
 const stopGameWhenSnakeAteItself = function() {
   let head = snake.getHead();
