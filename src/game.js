@@ -3,3 +3,7 @@ const Game = function(numberOfRows, numberOfCols) {
   this.cols = numberOfCols;
   this.snake = {};
 }
+
+Game.protype.createFood = function() {
+  food=generateRandomPosition(this.rows,this.cols);
+};
