@@ -13,7 +13,6 @@ const animateSnake=function() {
   paintBody(oldHead);
   unpaintSnake(oldTail);
   paintHead(head);
-  stopGame();
   if(head.isSameCoordAs(food)) {
     snake.grow();
     createFood(numberOfRows,numberOfCols);
@@ -88,6 +87,7 @@ const startGame=function() {
   createSnake();
   drawGrids(numberOfRows,numberOfCols);
   drawSnake(snake);
+  stopGame(); 
   createFood(numberOfRows,numberOfCols);
   drawFood(food);
   addKeyListener();
