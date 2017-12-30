@@ -24,8 +24,7 @@ Snake.prototype={
   turnRight:function() {
     this.head=this.head.turnRight();
   },
-  stopGameWhenSnakeAteItself: function() {
-    let head = snake.getHead();
-    return position.isSameCoordAs(head);
+  isSnakeEatItself: function() {
+    return this.body.some((position)=>this.head.isSameCoordAs(position));
   }
 }
