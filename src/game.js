@@ -9,7 +9,7 @@ Game.protype.createFood = function() {
 };
 
 
-Game.prototype.stopGameWhenSnakeTouchBorder = function(position) {
+Game.prototype.hasSnakeTouchBorder = function(position) {
  let maxCoordX = numberOfRows-1;
  let maxCoordY = numberOfCols-1;
  return !position.isInMinAndMaxCoords(maxCoordX, maxCoordY);
