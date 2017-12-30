@@ -51,10 +51,6 @@ const createSnake=function() {
   snake=new Snake(head,body);
 }
 
-const stopGameWhenSnakeAteItself = function() {
-  let head = snake.getHead();
-  return position.isSameCoordAs(head);
-}
 
 const reloadGame = function() {
   window.location.reload();
