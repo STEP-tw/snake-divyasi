@@ -43,6 +43,10 @@ Position.prototype.getCoord=function() {
   return [this.x,this.y];
 }
 
+Position.isInMinAndMaxCoords = function(maxCoordX, maxCoordY) {
+  return (this.x > 0 && this.x < maxCoordX) || (this.y > 0 && this.y < maxCoordY);
+}
+
 const generateRandomPosition=function(maxX,maxY) {
   let x=generateRandomNumberBetween(0,maxX);
   let y=generateRandomNumberBetween(0,maxY);
